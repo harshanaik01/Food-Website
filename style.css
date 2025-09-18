@@ -13,7 +13,7 @@ body {
 /* Navbar */
 .navbar {
     background: #f06262;
-    padding: 16px 0;
+    padding: 12px 0;
     align-items: center;
     
 }
@@ -23,7 +23,8 @@ body {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    padding: 0px 100px;
+    padding: 0px 200px;
+    margin-right: 50px;
     
 }
 
@@ -47,19 +48,25 @@ body {
     color: black;
 }
 
+.navbar a:hover {
+    color:#f9f3f3;
+}
+
 
 .menu-toggle {
     display: none;
+
 }
 
-.menu-icon {
-    display: flex;
-    font-size: 24px;
-    cursor: pointer; 
-}
 .menu-icon img {
     width: 30px;
     height: 30px;
+    cursor: pointer;
+}
+
+.menu-icon img:hover{
+    background:#ffffff;
+    transform: scale(1.1);
 }
 
 /* Hero Section */
@@ -71,7 +78,7 @@ body {
 
 .hero-left {
     flex: 1 1 50%;
-    padding: 150px;
+    padding: 140px;
     background: linear-gradient(to right, #fff9a6, #ffc0cb);
     display: flex;
     flex-direction: column;
@@ -86,7 +93,8 @@ body {
 
 .hero-left p {
     margin-bottom: 32px;
-    max-width: 500px;
+    max-width: 600px;
+    font-size: 15px;
 }
 
 .btn {
@@ -97,7 +105,7 @@ body {
     font-size: 15px;
     cursor: pointer;
     transition: 0.3s ease;
-    margin-right: 250px;
+    margin-right: 300px;
 }
 
 .btn:hover {
@@ -209,7 +217,7 @@ body {
 
 .btn-link:hover {
     transform: translateX(5px);
-    color: #f33636;
+    color: #ffffff;
 }
 
 /* Media Queries for Responsiveness */
@@ -217,18 +225,12 @@ body {
     
     .navbar nav {
         flex-direction: column;
-        align-items: flex-start;
-        padding: 0 20px;
+        align-items: flex-end;
+        padding: 5px 10px;
+        margin-right: 0px;
        
     }
-
-    .menu-icon {
-        display: block; 
-        position: absolute;
-        top: 15px;
-        right: 20px;
-    }
-
+ 
     .navbar .nav-list {
         display: none; 
         flex-direction: column;
@@ -237,16 +239,17 @@ body {
         text-align: center;
         padding-top: 20px;
     }
+
+    .menu-toggle:checked ~ .nav-list {
+    display: flex;
+    }
     
     .navbar .nav-list li {
         margin: 0px 0;
         width: 100%;
     }
     
-    .menu-toggle .nav-list {
-        display: flex;
-    }
-
+    
     .hero {
         flex-direction: column;
         min-height: auto;
@@ -267,7 +270,8 @@ body {
     }
 
     .btn {
-        margin-right: 0;
+        margin-right: 100px;
+        margin-left: 100px;
     }
     
     .second-section {
@@ -291,7 +295,7 @@ body {
         grid-row: auto !important;
         width: 100% !important;
         height: auto !important;
-        aspect-ratio: auto !important;
+        aspect-ratio: 1 / 1 !important;
         object-fit: cover;
         display: block;
     }
