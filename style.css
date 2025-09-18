@@ -23,7 +23,7 @@ body {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    padding: 0px 200px;
+    padding: 0px ;
     margin-right: 50px;
     
 }
@@ -245,7 +245,7 @@ body {
     }
     
     .navbar .nav-list li {
-        margin: 0px 0;
+        margin: 0px ;
         width: 100%;
     }
     
